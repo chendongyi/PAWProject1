@@ -26,7 +26,7 @@ SECRET_KEY = 'd%t!30p0#n_d!mi=3%)6_g_+!vmp@&t(egxfhu!tadt=i%$t*h'
 DEBUG = True
 
 ALLOWED_HOSTS = ['cdy19861111.pythonanywhere.com',]
-
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'sendemail',
+    'cdy_auth',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +121,25 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT =25
+EMAIL_HOST_USER = 'cdy19861111@163.com'
+EMAIL_HOST_PASSWORD = '#edcVfr4%t'
+DEFAULT_FROM_EMAIL = 'ChenDongyi <cdy19861111@163.com>'
+
+# EMAIL_USE_SSL = True
+# EMAIL_HOST = 'smtp.163.com'
+# EMAIL_PORT =465
+# EMAIL_HOST_USER = 'cdy19861111@163.com'
+# EMAIL_HOST_PASSWORD = '#edcVfr4%t'
+# DEFAULT_FROM_EMAIL = 'ChenDongyi <cdy19861111@163.com>'
+
+# EMAIL_USE_SSL = True
+# EMAIL_HOST = 'smtp.qq.com'
+# EMAIL_PORT =465
+# EMAIL_HOST_USER = '305139630@qq.com'
+# EMAIL_HOST_PASSWORD = 'uneiwdcxwnnmbifb'
+# DEFAULT_FROM_EMAIL = 'ChenDongyi <305139630@qq.com>'
